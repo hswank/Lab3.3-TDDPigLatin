@@ -1,0 +1,20 @@
+
+public class TDDPigLatin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static String Translate(String word) {
+		String Word = word;
+		String lowerWord = Word.toLowerCase();
+		
+		String vowels = "aeiou";
+		if (vowels.contains(lowerWord.substring(0, 1))) {
+			lowerWord += "way";
+		}
+		
+		return lowerWord;
+	}
+}

@@ -1,0 +1,29 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TDDPigLatinTest {
+
+	@Test
+	void TranslateTest() {
+		String expected = "gym";
+		String actual = TDDPigLatin.Translate("Gym");
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void TranslateTest2() {
+		String expected = "appleway";
+		String actual = TDDPigLatin.Translate("apple");
+		assertEquals(expected, actual);
+	}
+	
+	void TranslateTest3() {
+		String expected = "eggway";
+		String actual = TDDPigLatin.Translate("egg");
+		assertEquals(expected, actual);
+	}
+	
+	
+
+}

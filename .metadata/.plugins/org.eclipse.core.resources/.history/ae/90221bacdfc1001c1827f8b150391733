@@ -1,0 +1,29 @@
+
+public class TDDPigLatin {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static String Translate(String word) {
+		String Word = word;
+		String lowerWord = Word.toLowerCase();
+		boolean firstLetterConsonant = true;
+		
+		String vowels = "aeiou";
+		if (vowels.contains(lowerWord.substring(0, 1))) {
+			lowerWord += "way";
+		} else {
+			while (firstLetterConsonant) {
+				if (vowels.contains(lowerWord.substring(0, 1))) {
+					firstLetterConsonant = false;
+				} else {
+					lowerWord = lowerWord.substring(1, lowerWord.length() - 1) + lowerWord.substring(0) + "ay";
+				}
+			}
+		}
+		
+		return lowerWord;
+	}
+}
